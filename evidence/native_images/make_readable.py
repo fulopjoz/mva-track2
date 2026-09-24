@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Rebuild readable <stId>_overview.png / readable <stId>_zoom.png.
 
-Usage: python3 make_readable.py R-HSA-68877
+Usage: python3 make_readable.py R-HSA-68877 [outdir]
+Reads inputs from this script's directory; writes PNGs to outdir (default: cwd).
+outdir is NEVER the inputs dir requirement — safe to use a temp dir for the
+regenerated-vs-committed comparison without touching the tree.
 
 Inputs expected next to this script:
   reactome_<stId>.png                 - unflagged exporter PNG
@@ -16,6 +19,7 @@ Method (all constants visible):
     only asserts containment of a BUB1B/hBUBR1/MCC node at that tolerance.
 """
 import json
+import os
 import sys
 
 import numpy as np
@@ -57,9 +61,11 @@ def wrap_px(text, font, max_w):
     return lines
 
 
-def main(st):
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+def main(st, outdir="."):
     title, note = META[st]
-    d = json.load(open(f"diagram_{st}.json"))
+    d = json.load(open(os.path.join(HERE, f"diagram_{st}.json")))
     nodes = d["nodes"]
     Wj = max(n["maxX"] for n in nodes)
     Hj = max(n["maxY"] for n in nodes)
@@ -67,9 +73,9 @@ def main(st):
                                       or "hBUBR1" in n["displayName"]
                                       or "MCC:" in n["displayName"])]
     pn = st.replace("-", "_")
-    plain = Image.open(f"reactome_{pn}.png").convert("RGB")
+    plain = Image.open(os.path.join(HERE, f"reactome_{pn}.png")).convert("RGB")
     flagged = np.asarray(
-        Image.open(f"reactome_{pn}_flg_BUBR1.png").convert("RGB")).astype(int)
+        Image.open(os.path.join(HERE, f"reactome_{pn}_flg_BUBR1.png")).convert("RGB")).astype(int)
     base = np.asarray(plain).astype(int)
     H, W = base.shape[:2]
     sx, sy = W / Wj, H / Hj
@@ -126,7 +132,8 @@ def main(st):
         dr.ellipse([cx - r, cy - r, cx + r, cy + r],
                    fill=(208, 96, 88), outline=(255, 255, 255), width=4)
         dr.text((cx, cy), str(k), anchor="mm", fill="white", font=f)
-    ov.save(f"readable_{pn}_overview.png")
+    os.makedirs(outdir, exist_ok=True)
+    ov.save(os.path.join(outdir, f"readable_{pn}_overview.png"))
 
     cols = 3
     rows = (len(crops) + cols - 1) // cols
@@ -178,9 +185,9 @@ def main(st):
     out = Image.new("RGB", (cols * cell_w, rows * cell_h + cap_h), "white")
     out.paste(grid, (0, 0))
     out.paste(cap, (0, rows * cell_h))
-    out.save(f"readable_{pn}_zoom.png")
+    out.save(os.path.join(outdir, f"readable_{pn}_zoom.png"))
     print(st, "panels:", len(crops), "starred:", sum(contains_bub(c) for c in crops))
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else ".")

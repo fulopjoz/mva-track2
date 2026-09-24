@@ -26,15 +26,23 @@ selection flag.
      (141436), `hBUBR1:hBUB3:MAD2*:CDC20 complex` (141440, the MCC),
      `MCC:APC/C complex` (141410), Mad1:kinetochore complexes and
      Kinetochore (375305).
-3. **Flag-diff coincidence (cross-check of 1 against 2).** Diff clusters
-   (>30 RGB channel sum, >200 px) mapped onto diagram-JSON node geometry via
-   an extent-fit scale (approximate, ±120 model units tolerance):
-   - R-HSA-5663220: 4/4 clusters coincide with step-2 complex nodes.
-   - R-HSA-69620: 12/12 coincide (incl. the explicit BUB1B/MCC nodes).
-   - R-HSA-68877: 8/10 coincide; **2 unexplained clusters** (≈model
-     coordinates 59,52 and 430,77, near the "Mitotic Prophase" and "S Phase"
-     compartment labels, which contain no O60566 component) — recorded as
-     unexplained, not folded into the membership story.
+3. **Flag-diff coincidence (cross-check of 1 against 2, with null baselines).**
+   Diff clusters (>30 RGB channel sum, >200 px) mapped onto diagram-JSON node
+   geometry via an extent-fit scale (approximate, ±120 model units tolerance).
+   Baseline = fraction of 1000 random 150-unit boxes landing on the same
+   verified node set; p = one-sided binomial test vs that baseline:
+   - R-HSA-69620: **12/12 coincide** (incl. the explicit BUB1B/MCC nodes)
+     vs baseline 10.7% — p ≈ 2e-12. Decisive.
+   - R-HSA-5663220: **4/4 coincide** vs baseline 38.6% — p = 0.022.
+     Significant.
+   - R-HSA-68877: 8/10 coincide vs baseline 58.6% — p = 0.15. The diagram is
+     so dense in large kinetochore containers that this test carries no
+     discriminative power; on this diagram the kinetochore membership in
+     step 2 (participants endpoint) — not pixel coincidence — is the evidence
+     that the flagged regions are BUB1B-containing complexes. **2 unexplained
+     clusters** (≈model coordinates 59,52 and 430,77, near the "Mitotic
+     Prophase" and "S Phase" compartment labels, which contain no O60566
+     component) — recorded as unexplained, not folded into the story.
 
 Conclusion: flag-vs-plain differences mark **BUB1B-containing complexes**
 (never a larger claim). An earlier revision of this file called the clusters
