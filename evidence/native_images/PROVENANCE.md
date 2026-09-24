@@ -1,10 +1,24 @@
 # Native image provenance
 
 All URLs live-fetched 2026-09-22. Highlight variants were exported with the
-Reactome `flg=O60566` selection flag; each flagged export was pixel-diffed
-against its unflagged twin and the differences resolve to compact localized
-clusters at BUBR1's diagram occurrences (10 clusters on R-HSA-68877,
-22 on R-HSA-69620) — the highlight is real, not a metadata artifact.
+Reactome `flg=O60566` selection flag. **Controls:** (1) the exporter is
+deterministic — two unflagged fetches of the same diagram are byte-identical
+(delta sum 0, 0 diff clusters), so flag-vs-plain pixel differences are real
+render changes, not timestamps or noise; (2) cross-checking the diff clusters
+against node geometry from https://reactome.org/download/current/diagram/{stId}.json
+shows the flagged regions do NOT correspond to a drawn BUBR1 node on
+R-HSA-68877 or R-HSA-5663220 — BUB1B is never a standalone node in those two
+diagrams; Reactome flags it through component membership in kinetochore
+complexes (per diagram JSON node names intersecting each cluster:
+"Kinetochore", "Microtubule-bound kinetochore",
+"Kinetochore:CDC42:GTP:DIAPH2-2"). On R-HSA-69620 the flag DOES cover the
+explicitly drawn entities (verified against diagram JSON): the `BUB1B`
+protein node, `hBUBR1:hBUB3:MAD2*:CDC20 complex` (the MCC), and
+`MCC:APC/C complex` — those panels are starred (*) in the readable set.
+
+An earlier revision of this file claimed the diff clusters proved "BUBR1
+diagram occurrences" on all three diagrams; withdrawn 2026-09-23 in favor of
+the complex-level statement above.
 
 ## Reactome ContentService diagram exporter — CC-BY 4.0, cite Reactome (PMID 34788843)
 
@@ -42,3 +56,13 @@ BubR1 kinase domain, different crystals — keep their provenance distinct.
 
 AFDB serves no native images; the pLDDT strip is the only image-grade
 derivative and renders only values present in the official confidence file.
+
+## Derived zoom set (`readable_*.png`) — built 2026-09-23
+
+- `readable_<stId>_overview.png`: full native diagram with numbered markers at
+  the `flg=O60566` render regions.
+- `readable_<stId>_zoom.png`: 90-px-padded crops of those regions at
+  4x max scale; per-panel node names and explicit-BUB1B star marks come from
+  the diagram JSON geometry, not from the diff pixels.
+- `diagram_<stId>.json`: Reactome diagram layout JSON used for the node
+  geometry (source: https://reactome.org/download/current/diagram/{stId}.json).
