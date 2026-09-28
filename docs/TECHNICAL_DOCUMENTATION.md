@@ -164,8 +164,9 @@ python3 checks/check_citations.py $PWD   # run from anywhere; arg = repo root
 It censuses the report's `[E#]` register (defined in report §8) against in-text
 citations and prints `CENSUS OK` on success. The script recomputes the numbers
 itself on every run; last run 2026-09-28: **61 base entries + 2 sub-rows, all
-cited**. Do not confuse this with the separate "≤ 90/90 registry-verified
-citations" figure in the report (per-wave literature-identifier verification,
+cited**. Do not confuse this with the separate "90/90 registry-verified
+citations" figure in the report (32+34+24 across the three waves; per-wave
+literature-identifier verification,
 recorded in [`evidence/WORKFLOW_CONSENSUS.md`](../evidence/WORKFLOW_CONSENSUS.md))
 — different ledger, different count. A failing census blocks ship — run it
 after any edit to `TRACK2_REPORT.md`.

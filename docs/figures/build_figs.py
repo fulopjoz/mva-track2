@@ -16,6 +16,24 @@ FILL = (0.95, 0.95, 0.97)
 ACCENT = (0.24, 0.35, 0.66)
 
 
+
+def _assert_fits(fig, ax, checks, margin=0.010):
+    """Fail loudly if any text extends outside its box.
+    checks: list of (text_artist, x, y, w, h) in axes coordinates."""
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    bad = []
+    for t, x, y, w, h in checks:
+        bb = t.get_window_extent(r)
+        (x0, y0), (x1, y1) = ax.transData.inverted().transform(
+            [(bb.x0, bb.y0), (bb.x1, bb.y1)])
+        if x0 < x - margin or x1 > x + w + margin \
+                or y0 < y - margin / 2 or y1 > y + h + margin / 2:
+            bad.append((t.get_text().split("\n")[0][:40], round(x0, 3),
+                        round(x1, 3), round(x, 3), round(x + w, 3)))
+    if bad:
+        raise SystemExit(f"text overflow outside box: {bad}")
+
 def draw_workflow(path):
     fig, ax = plt.subplots(figsize=(11, 3.6))
     ax.set_axis_off()
@@ -29,13 +47,16 @@ def draw_workflow(path):
         ("Adversarial passes", "major-count decay\n8 \u2192 2 \u2192 2 \u2192 0"),
         ("Deliverables", "TRACK2_REPORT\ncandidates.tsv\nfigures F1\u2013F5"),
     ]
+    checks = []
     for (title, note), x in zip(boxes, cols):
         ax.add_patch(Rectangle((x, y), w, h, linewidth=1.1,
                                edgecolor=INK, facecolor=FILL))
-        ax.text(x + w / 2, y + h - 0.12, title, ha="center", va="center",
-                fontsize=11, weight="bold", color=ACCENT)
-        ax.text(x + w / 2, y + h * 0.40, note, ha="center", va="center",
-                fontsize=8.5, color=INK)
+        checks.append((ax.text(x + w / 2, y + h - 0.12, title, ha="center",
+                               va="center", fontsize=11, weight="bold",
+                               color=ACCENT), x, y, w, h))
+        checks.append((ax.text(x + w / 2, y + h * 0.40, note, ha="center",
+                               va="center", fontsize=8.5, color=INK),
+                       x, y, w, h))
     for i in range(len(cols) - 1):
         ax.add_patch(FancyArrowPatch((cols[i] + w, y + h / 2),
                                      (cols[i + 1], y + h / 2),
@@ -43,6 +64,7 @@ def draw_workflow(path):
                                      linewidth=1.2, color=INK))
     ax.text(cols[2] + w / 2, y + h + 0.06, "CLOSED-WITH-RESIDUAL-RISK",
             ha="center", fontsize=9, color=(0.55, 0.15, 0.15), weight="bold")
+    _assert_fits(fig, ax, checks)
     fig.savefig(path, dpi=200, bbox_inches="tight")
     plt.close(fig)
 
@@ -69,21 +91,27 @@ def draw_verification(path):
     w, h = 0.72, 0.145
     x = 0.14
     top, gap = 0.925, 0.045
+    checks = []
     for i, (title, script, note) in enumerate(steps):
         y = top - i * (h + gap) - h
         ax.add_patch(Rectangle((x, y), w, h, linewidth=1.1,
                                edgecolor=INK, facecolor=FILL))
-        ax.text(x + w / 2, y + h - 0.032, title, ha="center", va="center",
-                fontsize=10, weight="bold", color=ACCENT)
-        ax.text(x + w / 2, y + h * 0.44, f"[ {script} ]", ha="center",
-                va="center", fontsize=7.5, style="italic", color=INK)
-        ax.text(x + w / 2, y + h * 0.16, note, ha="center", va="center",
-                fontsize=7.5, color=INK)
+        checks = [] if not checks else checks
+        checks.append((ax.text(x + w / 2, y + h - 0.032, title, ha="center",
+                               va="center", fontsize=10, weight="bold",
+                               color=ACCENT), x, y, w, h))
+        checks.append((ax.text(x + w / 2, y + h * 0.44, f"[ {script} ]",
+                               ha="center", va="center", fontsize=7.5,
+                               style="italic", color=INK), x, y, w, h))
+        checks.append((ax.text(x + w / 2, y + h * 0.16, note, ha="center",
+                               va="center", fontsize=7.5, color=INK),
+                       x, y, w, h))
         if i < len(steps) - 1:
             ax.add_patch(FancyArrowPatch((x + w / 2, y),
                                          (x + w / 2, y - gap),
                                          arrowstyle="-|>", mutation_scale=13,
                                          linewidth=1.2, color=INK))
+    _assert_fits(fig, ax, checks)
     fig.savefig(path, dpi=200, bbox_inches="tight")
     plt.close(fig)
 
