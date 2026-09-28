@@ -4,7 +4,7 @@ Invariants: every [E#] cited in the body is defined in §8; every defined row is
 cited; no duplicate rows. If the §8 heading carries a count it must equal the
 number of defined base rows (heading is count-free by design since 2026-09-14  - 
 a printed count was demonstrated irreproducible twice). Exit 1 on any break.
-Run from anywhere: python3 scripts/check_citations_pro.py <repo-root>."""
+Run from anywhere: python3 checks/check_citations.py <repo-root>."""
 import re, sys, pathlib
 root = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else '.')
 lines = (root / 'TRACK2_REPORT.md').read_text().splitlines()

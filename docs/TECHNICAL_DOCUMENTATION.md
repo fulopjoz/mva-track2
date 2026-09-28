@@ -21,7 +21,7 @@ Aneuploidy). The deliverables in this repository are:
 | Lay report | [`TRACK2_LAY_REPORT.md`](../TRACK2_LAY_REPORT.md), [`.pdf`](../TRACK2_LAY_REPORT.pdf) | Plain-language companion for the family/foundations audience |
 | Candidate table | [`candidates.tsv`](../candidates.tsv) | 20-row machine-readable candidate register |
 | Report figures | [`figures/`](../figures) | F1–F5 committed renders |
-| Evidence pack | [`evidence/`](../evidence) | 19 analytical memos (manifest: [`evidence/MEMO_MANIFEST.md`](../evidence/MEMO_MANIFEST.md)), four adversarial review passes, adjudication memo, structural validation |
+| Evidence pack | [`evidence/`](../evidence) | 19 analytical memos — 4 wave-2 + 5 wave-3 + 4 wave-4 + 3 literature scans + 3 mechanism memos, exactly as enumerated in [`evidence/MEMO_MANIFEST.md`](../evidence/MEMO_MANIFEST.md) — plus the four adversarial review passes, adjudication memo, and structural-validation records |
 | Native images | [`evidence/native_images/`](../evidence/native_images) | Third-party structural imagery with a full verification chain (§4) |
 | Citation check | [`checks/check_citations.py`](../checks/check_citations.py) | Reference-consistency gate (§6) |
 
@@ -161,10 +161,14 @@ reference-consistency gate for the professional report:
 python3 checks/check_citations.py $PWD   # run from anywhere; arg = repo root
 ```
 
-It censuses the report's numbered reference block against in-text citations and
-prints `CENSUS OK` on success (current state: **61 base entries + 2 sub-rows,
-all cited**). A failing census blocks ship — run it after any edit to
-`TRACK2_REPORT.md`.
+It censuses the report's `[E#]` register (defined in report §8) against in-text
+citations and prints `CENSUS OK` on success. The script recomputes the numbers
+itself on every run; last run 2026-09-28: **61 base entries + 2 sub-rows, all
+cited**. Do not confuse this with the separate "≤ 90/90 registry-verified
+citations" figure in the report (per-wave literature-identifier verification,
+recorded in [`evidence/WORKFLOW_CONSENSUS.md`](../evidence/WORKFLOW_CONSENSUS.md))
+— different ledger, different count. A failing census blocks ship — run it
+after any edit to `TRACK2_REPORT.md`.
 
 ---
 

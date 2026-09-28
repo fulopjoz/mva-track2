@@ -24,10 +24,10 @@ def draw_workflow(path):
     cols = [0.02, 0.27, 0.52, 0.77]
     w, h, y = 0.21, 0.62, 0.18
     boxes = [
-        ("Sources", "RCSB PDB, PDBe, AlphaFold DB,\nReactome, UniProt"),
-        ("Evidence memos", "19 analytical memos\n(evidence/, MEMO_MANIFEST.md)"),
+        ("Sources", "RCSB PDB \u00b7 PDBe\nAlphaFold DB\nReactome \u00b7 UniProt"),
+        ("Evidence memos", "19 analytical memos\nevidence/\nMEMO_MANIFEST.md"),
         ("Adversarial passes", "major-count decay\n8 \u2192 2 \u2192 2 \u2192 0"),
-        ("Deliverables", "TRACK2_REPORT,\ncandidates.tsv, figures F1\u2013F5"),
+        ("Deliverables", "TRACK2_REPORT\ncandidates.tsv\nfigures F1\u2013F5"),
     ]
     for (title, note), x in zip(boxes, cols):
         ax.add_patch(Rectangle((x, y), w, h, linewidth=1.1,
@@ -68,7 +68,7 @@ def draw_verification(path):
     ax.set_ylim(0, 1)
     w, h = 0.72, 0.145
     x = 0.14
-    top, gap = 0.94, 0.055
+    top, gap = 0.925, 0.045
     for i, (title, script, note) in enumerate(steps):
         y = top - i * (h + gap) - h
         ax.add_patch(Rectangle((x, y), w, h, linewidth=1.1,
