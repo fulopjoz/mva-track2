@@ -29,11 +29,12 @@ selection flag.
 3. **Flag-diff coincidence (cross-check of 1 against 2, with null baselines).**
    Diff clusters (>30 RGB channel sum, >200 px) mapped onto diagram-JSON node
    geometry via an extent-fit scale (approximate, ±120 model units tolerance).
-   Baseline = fraction of 1000 random 150-unit boxes landing on the same
-   verified node set; p = one-sided binomial test vs that baseline:
+   Baseline = fraction of 1000 random 150-unit boxes (seed 42) landing on the
+   same verified node set — computed by `null_baseline.py`; re-run reproduces
+   all three numbers verbatim; p = one-sided binomial test vs that baseline:
    - R-HSA-69620: **12/12 coincide** (incl. the explicit BUB1B/MCC nodes)
-     vs baseline 10.7% — p ≈ 2e-12. Decisive.
-   - R-HSA-5663220: **4/4 coincide** vs baseline 38.6% — p = 0.022.
+     vs baseline 9.9% — p ≈ 9e-13. Decisive.
+   - R-HSA-5663220: **4/4 coincide** vs baseline 38.8% — p = 0.023.
      Significant.
    - R-HSA-68877: 8/10 coincide vs baseline 58.6% — p = 0.15. The diagram is
      so dense in large kinetochore containers that this test carries no
