@@ -1,0 +1,46 @@
+% Layout hardening for the built PDFs.
+%
+% Why this exists: 18 of 20 measured overflow findings were URL-shaped spans carrying tokens of
+% 40+ characters (DOIs and links). TeX will not break those by default, so they ran past the
+% right margin and, in five cases, past the physical page edge on a 612pt page — clipped text.
+%
+% WHICH CHANGE ACTUALLY FIXES IT (established by mutation-testing each one against the gate,
+% not by assumption):
+%   * the \texttt character-level breaking at the end of this file is LOAD-BEARING — removing
+%     it alone reintroduces the defect (gate exit 5, 2 findings on the technical doc);
+%   * xurl is NOT individually necessary here — removing it leaves the gate clean, because every
+%     remaining long link sits inside inline code rather than a bare \url;
+%   * the 1in geometry is NOT individually necessary either.
+% xurl and the geometry are kept as defence for display URLs outside inline code, which this
+% document happens not to contain today. They are belt-and-braces, not the fix.
+\usepackage{xurl}                 % break long URLs/DOIs at any character
+\usepackage[hyphens]{url}         % also break at existing hyphens
+\sloppy                           % prefer loose interword spacing over an overfull line
+\setlength{\emergencystretch}{3em}% last-resort stretch before TeX gives up and overflows
+\hbadness=10000                   % underfull-box warnings are not useful here
+
+% U+2605 BLACK STAR is absent from DejaVu Serif Bold (verified: the Bold cmap has no 0x2605),
+% so xelatex dropped it and the build warned "Missing character". DejaVu Sans does carry it, so
+% route just that codepoint to Sans rather than changing the document font.
+\usepackage{etoolbox}
+\usepackage{newunicodechar}
+\newfontfamily\symbolfallback{DejaVu Sans}
+\newunicodechar{★}{{\symbolfallback ★}}
+
+% Wide tables: a 3-column table overflowed the text block by ~3pt. Tighten intercolumn padding
+% and allow the table font to shrink a step before it is permitted to run into the margin.
+\setlength{\tabcolsep}{4pt}
+\AtBeginEnvironment{longtable}{\small}
+\AtBeginEnvironment{tabular}{\small}
+
+% Long URLs inside INLINE CODE. pandoc renders `backticked` text as \texttt, and xurl does not
+% reach inside it, so a 65-character link in a table cell still ran 4pt past the page edge after
+% every other fix. Insert an optional breakpoint before each character of \texttt content: the
+% glyphs are unchanged, but TeX may now break anywhere instead of overflowing.
+\makeatletter
+\let\origtexttt\texttt
+\renewcommand{\texttt}[1]{%
+  \begingroup\ttfamily\hyphenpenalty=10000\relax
+  \@tfor\bt@c:=#1\do{\allowbreak\bt@c}%
+  \endgroup}
+\makeatother
