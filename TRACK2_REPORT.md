@@ -216,7 +216,7 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 - **E21a** Live registry census (ClinicalTrials.gov, CTIS, EU-CTR, ISRCTN, ANZCTR with
   everolimus positive controls): **zero MVA-specific intervention trials/registries**  - 
   repo artifact `evidence/wave4_SurveillanceToday.md` (query log + API dates 2026-09-05).
-- **E47** Kuhlen 2026 + CHARM2 trial NCT06726642 (cfDNA RCT; MVA/CIN exclusion verified
+- **E47** Kuhlen 2026 + CHARM2 trial NCT06726642 (cfDNA prospective observational case-control study, NOT randomised - ClinicalTrials.gov design record; MVA/CIN exclusion verified
   live). https://clinicaltrials.gov/study/NCT06726642 · evidence pack wave4 doc.
 - **E30** Capal et al. 2024 - PREVENT: prophylactic sirolimus in TSC infants (94 % of
   troughs in target). PMID 39726432. https://pubmed.ncbi.nlm.nih.gov/39726432/ · verified.
@@ -332,7 +332,7 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 - **E54** North et al. 2014 - SIRT2/NAD⁺ raises BubR1 abundance in vivo (exact hypomorph
   mouse). https://doi.org/10.15252/embj.201386907 · verified 2026-09-05.
 - **E55** (see E17a) - the site-dependence that makes SIRT2 *inhibition* prohibited chemistry.
-- **E56** Irie et al. 2020 - NAD⁺-precursor human safety RCT (adult). PMID 31685720.
+- **E56** Irie et al. 2020 - NAD⁺-precursor (NMN) human safety study (adult): single-arm, non-randomised, single oral dose in 10 healthy men - not a randomised controlled trial. PMID 31685720.
   https://pubmed.ncbi.nlm.nih.gov/31685720/ · verified.
 - **E57** Bursch 2024 - no selective SIRT2-activator compound exists.
   https://doi.org/10.3390/molecules29051185 · verified.
