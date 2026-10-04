@@ -125,6 +125,51 @@ The full 20-row candidate table with per-row verdicts and reasons ships as `cand
 
 ---
 
+### 4.6 Non-pharmacological directions, examined and bounded
+
+Three routes that are not compounds were searched specifically, because a reviewer is entitled
+to ask why a drug at all. Each is reported with its strongest human precedent and the specific
+obstacle that stops it here. Every identifier was verified against OpenAlex or Crossref; none is
+retracted.
+
+**(a) Shifting the mosaic ratio — the only one with human precedent.** The patient already
+carries a mixture of competent and defective cells, and deliberately moving that ratio has been
+achieved in people: gene-corrected haematopoietic cells expanded in **unconditioned** Fanconi
+anaemia patients with bone-marrow-failure progression reversed over seven years [E65]; ADA-SCID
+neonates accumulated T cells carrying a normal gene over years [E66]; and naturally **revertant**
+skin was expanded and grafted back in recessive dystrophic epidermolysis bullosa [E67]. The
+selection step can also be made pharmacological rather than intrinsic [E68]. **Why it does not
+transfer here:** each works because corrected cells are *fitter* than uncorrected ones in a
+tissue that turns over and can be sampled or grafted. A constitutional chromosomal-instability
+syndrome affects every dividing tissue, and a checkpoint-deficient cell has no established growth
+disadvantage for a corrected cell to exploit. The prerequisite experiment is therefore to show
+that corrected cells outcompete deficient ones in this genotype at all — which has not been done.
+
+**(b) Selectively eliminating aneuploid cells — no postnatal precedent.** Aneuploidy-selective
+antiproliferative compounds exist, AICAR among them [E69], and karyotypically normal cells have
+been selected out of a mosaic patient fibroblast line ex vivo, in a preprint that is not peer reviewed [E70]. But **no
+intervention of any kind has been shown to lower an aneuploid cell fraction in a living postnatal
+mammal**; the only fraction-shifting result in an organism is an embryo-culture condition [E71],
+and no registered trial uses an aneuploid fraction as an endpoint.
+
+**(c) Restoring the protein directly — modality available, target untouched.** Intracellular and
+even nuclear protein restoration is established in humans across lentiviral, AAV, in-vivo base
+editing and prime editing, including in a child. **No kinetochore or mitotic-checkpoint protein
+has ever been restored therapeutically at any stage, clinical or preclinical**; the literature
+treats this protein class exclusively as an oncology knockdown target. Two obstacles follow, and
+the second is disqualifying without a solution: the established nuclear precedent delivers to
+*post-mitotic* neurons, whereas a checkpoint protein is required in every dividing tissue; and
+this protein is characterised in cancer as **overexpressed and pro-tumour**, so an unregulated
+restoration vector would carry a tumour risk in a patient who is already cancer-predisposed. Any
+proposal in this direction must solve expression control first, as MECP2 gene therapy did with
+miRNA auto-regulation.
+
+**What this section claims.** Only that the alternatives were examined and bounded with evidence:
+one has human precedent but no mechanism to exploit here, one has never been attempted in a
+postnatal animal, and one has an empty target space plus a named safety objection. It does not
+claim any of them is ready, and it does not weaken the exclusion jurisprudence of §4.5 — it
+extends the same discipline to the non-pharmacological space.
+
 ## 5. Validation plan: six assays, each mapped to a decision
 
 All fit within routine ethics-committee consent; none is invasive beyond a blood draw or established cell culture.
@@ -380,6 +425,14 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
   Δ716-761 + E715G with KARD-boundary caution (wave3_ASOdeep.md §(a)).
 
 ---
+
+- **E65** Río et al. 2019, *Nat Med* 25(9):1396 — lentiviral gene therapy in unconditioned Fanconi anaemia patients; gene-corrected haematopoietic cells engrafted and progressively expanded without conditioning, with reversal of bone-marrow-failure progression, followed up to 7 years. https://doi.org/10.1038/s41591-019-0550-z
+- **E66** Kohn et al. 1998, *Nat Med* 4(7):775 — T lymphocytes carrying a normal ADA gene accumulated progressively after neonatal gene transfer in ADA-SCID (n=3). https://doi.org/10.1038/nm0798-775
+- **E67** Matsumura et al. 2019, *J Invest Dermatol* — cultured epidermal autografts grown from clinically revertant skin in recessive dystrophic epidermolysis bullosa; 3 patients, 8 ulcers. https://doi.org/10.1016/j.jid.2019.03.1155
+- **E68** Adair et al. 2012, *Sci Transl Med* — MGMT-P140K gene marking with drug-based in-vivo selection of modified cells in glioblastoma patients; demonstrates a pharmacological rather than intrinsic selection step. https://doi.org/10.1126/scitranslmed.3003425
+- **E69** Tang, Williams, Siegel & Amon 2011, *Cell* — identification of aneuploidy-selective antiproliferative compounds, including AICAR; cell lines, in vitro. https://doi.org/10.1016/j.cell.2011.01.017
+- **E70** Izumi et al. 2022 (preprint) — AICAR-mediated selection of karyotypically normal cells from patient fibroblasts mosaic for isochromosome 12p (Pallister-Killian); ex vivo, not peer reviewed. https://doi.org/10.1101/2022.01.27.478025
+- **E71** Sanchez-Vasquez, Bronner & Zernicka-Goetz 2025, *eLife* — HIF1A-mediated pathways promote euploid cell survival in mouse mosaic pre-implantation embryos; the only located intervention shifting an aneuploid fraction in an organism, and it is an embryo-culture condition. https://doi.org/10.7554/eLife.101912
 
 ## 9. Companion documents
 
