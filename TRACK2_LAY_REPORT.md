@@ -404,7 +404,7 @@ the AI - reviews and signs off on this report before it is used anywhere.
 
 ## 9. The figures, in one place
 - **Figure 1** - where the shape mutation sits (human AlphaFold + fly crystal):
-  [figures/F1_N1002K_structure.png](figures/F1_N1002K_structure.png)
+  [figures/F1_variant_structure.png](figures/F1_variant_structure.png)
 - **Figure 2** - protein map (UniProt-driven bands + 3-D render):
   [figures/F2_BubR1_protein_map.png](figures/F2_BubR1_protein_map.png)
 - **Figure 3** - the gene and the skippable exon (§5c above).
@@ -416,7 +416,7 @@ the AI - reviews and signs off on this report before it is used anywhere.
 met at zero). Right: identifier verification per wave (all sampled sources resolve to real
 papers). Source: evidence/WORKFLOW_CONSENSUS.md changelog.*
 
-![Figure 1 - where the second mutation sits](figures/F1_N1002K_structure.png)
+![Figure 1 - where the second mutation sits](figures/F1_variant_structure.png)
 *Figure 1. Left: human BubR1 kinase domain - a computer-predicted structure of the normal,
 healthy protein - with residue 1002 marked red (the position of the child's shape mutation,
 which is not modeled in this picture) and a neighboring regulatory switch-point (T1008) in

@@ -138,7 +138,7 @@ transcript, AlphaFold model, 6JKK crystal structure).
 
 | Figure | Subject |
 |---|---|
-| F1_N1002K_structure.png | p.Asn1002Lys structural context (6JKK-based) |
+| F1_variant_structure.png | p.Asn1002Lys structural context (6JKK-based) |
 | F2_BubR1_protein_map.png | BUBR1 functional-domain map with the two patient alleles |
 | F3_BUB1B_gene_exon17.png | Exon-17 architecture for the ASO-skipping program |
 | F4_decision_instrument.png | Gate instrument for therapeutic decisions |
