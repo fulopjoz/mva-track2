@@ -145,6 +145,19 @@ re-verified against live registries: **90 of 90 sampled identifiers resolve to r
 The full audit trail ships in this repository (`evidence/WORKFLOW_CONSENSUS.md`, the four
 adversarial-review memos, and 19 research memos with recorded search logs).
 
+**One extra check that is not yet in the official guidance, and why it is missing.** Two further
+sources written for this condition both add a **blood test every three months, to look for
+leukaemia**, alongside the kidney ultrasound: a 2026 guide written for this exact gene by the MVA
+Society with Unique and reviewed by a consultant geneticist [E73], and Japan's national handbook for
+this syndrome, which schedules a blood count at every visit from three months of age onwards [E74].
+The reason it is absent from the main guidance is specific. The companion guideline covering blood
+cancers in children with a genetic predisposition does not mention this syndrome, or any of its
+genes, anywhere in its text [E75]. Set against that, one child with this condition did develop a
+bone-marrow disorder and died after a transplant [E76]. We are not making this a recommendation:
+the sources are a family guide and a national handbook rather than a formal guideline, and the
+marrow evidence is a single case. We report it because a three-monthly blood test is cheap and
+low-risk, and because a family should be able to raise it with their team and ask whether it fits.
+
 **Three honesty features unusual enough to name:**
 1. Several of our own earlier statements were caught and corrected by the adversarial
    passes - the corrections are preserved inline so you can see them (e.g., a misattributed
@@ -631,6 +644,10 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
   && dataset https://huggingface.co/datasets/SageBio/mva-hackathon-2026-data · submission
   window 2026-08-24 → 2026-10-24, scite partnership terms (per organizer pages).
 - **E44a** Assay #4 specification: evidence/TRACK2_ATTACK_MAP.md §Validation plan; construct details
+- **E73** MVA Society and Unique, *Mosaic variegated aneuploidy syndrome 1 (BUB1B)* guide, 2026, reviewed by a consultant in clinical and paediatric genetics. Says no clinical practice guidelines exist for this genotype, and recommends abdominal ultrasound every three months plus a blood check every three months to detect leukaemia. A family guide, not a formal guideline. https://mvasociety.org/wp-content/uploads/2026/07/MVA-BUB1B-guide.pdf
+- **E74** Japanese national management handbook for PCS/MVA syndrome, March 2017, Health Labour Sciences Research Grant: schedules abdominal ultrasound and a full blood count at every visit from three months of age into adulthood. https://raredis.nibn.go.jp/malformation/management_guidelines_notebook/32.pdf
+- **E75** Maese et al. 2024, *Clinical Cancer Research*, AACR surveillance update for children predisposed to blood cancers. Cited for a verified absence: its full text names neither this syndrome nor any of its genes. https://doi.org/10.1158/1078-0432.CCR-24-0685
+- **E76** Laberko et al. 2019, *Orphanet Journal of Rare Diseases*, the only reported stem cell transplant in this syndrome, in a child with myelodysplasia and monosomy 7; graft rejection at day +47 and death at day +156. https://doi.org/10.1186/s13023-019-1073-x
   Δ716-761 + E715G with KARD-boundary caution (wave3_ASOdeep.md §(a)).
 
 ## 11. Glossary (every technical word in this report)
