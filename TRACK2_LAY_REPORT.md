@@ -113,8 +113,8 @@ the contact that breaking would destabilize [E39]. (See Figure 1.)
 **The abundance logic that runs the whole analysis.**  This child has one copy making ~0%
 of its protein and one copy making a reduced amount of a fragile protein. Total working
 BubR1 in the child's cells therefore sits at some small fraction of normal. Laboratory
-measurements in patient-derived cells have shown that the checkpoint works almost normally
-when a person has roughly ~13% of the normal BubR1 level, and fails badly at ~6% [E04].
+measurements taken inside one laboratory's titration experiment on cancer cells showed the checkpoint still worked almost normally
+when the cells were dialled down to ~13% of their normal BubR1 level, and mis-segregated badly at ~6% [E04]. In this child's own patient-derived cells the same study measured just a 2-to-6-fold reduction of the mutant protein - a fold number, never a percentage of normal. So the titration numbers are a laboratory comparison, not a medical threshold for this child.
 Nobody has measured this child's actual BubR1 level - that is assay #6 in §6. But the
 arithmetic of one nearly silent copy plus one fragile copy puts the child somewhere in that
 dangerously narrow band. **That is why every serious treatment idea
@@ -281,14 +281,19 @@ cords are already reachable by this drug class? Because the chromosome instabili
 and elsewhere - so a drug reaching only muscle or spinal cord would cover, at best, a
 fraction of the risk.
 **The two honest problems:**
-1. **The patched protein must actually work.** Skipping block 17 removes the 46 building
-   blocks it encodes (the chain from position 716 through 761) and changes one neighbor
-   (position 715) - in scientific shorthand "Δ716-761 + E715G" [E42]. No one has tested
+1. **The patched protein must actually work.** Skipping block 17 shortens the protein by
+   47 building blocks (positions 716 through 762) and re-encodes one neighbor (in scientific
+   shorthand, p.Glu715_Gly762delinsGly - we rebuilt this from the exact reference transcript and
+   verified it with a reproducible script: the 141 missing nucleotides correspond to 46 complete
+   interior code-words plus two boundary code-words, and the boundary nearest the gene's start is
+   re-encoded glycine; what exactly is lost cannot be read off from dividing 141 by 3 alone -
+   it has to come from the real sequence) [E42]. No one has tested
    whether that shortened BubR1 is functional. Worse - the patch is *not* mutation-specific:
    it would skip exon 17 in the child's *other, shape-mutated copy too*. Our back-of-envelope
    arithmetic (assumptions documented in the evidence pack) estimates that if the shortened
-   protein works, benefit lands at ~16–22 % of normal levels - an estimate, not a measurement  - 
-   above the ~13 % competence line; and if it doesn't, the patch would break the remaining
+   protein works, benefit lands at ~16-22 % of normal levels - an assumption-dependent estimate,
+   not a measurement, and judged against a laboratory titration number only because nothing better
+   exists yet; and if it doesn't, the patch would break the remaining
    copy too [E40-P2]. **That is exactly why the program's first step makes the shortened
    protein in a lab dish and checks whether it works - before any child anywhere touches it**
    (assay #4 in §6).
@@ -366,13 +371,13 @@ Everything below fits inside routine ethics-committee consent; none invades the 
 3. **Stability of the shape-mutated copy**: a standard "label-and-watch" experiment (a
    so-called pulse-chase) that times how quickly the fragile protein is destroyed - a direct
    test of the degradation prediction [E39].
-4. **★ The decisive experiment**: build the Δ716-761+E715G patched protein and test
+4. **★ The decisive experiment**: build the Δ716-762(+E715G) patched protein and test
    does it appear in cells at all, does it hold its shape, does it reach the protein's
    workstation at the chromosomes, **and** does it restore the checkpoint function. This one
    assay decides the entire exon-skipping program [E40-P2][E44a].
 5. **Abundance ± arimoclomol (± NMN)**, with an HSP90-inhibitor pulse as the positive
    control for degradation - directly calibrates every §5d adjunct [E50][E54].
-6. **Checkpoint-timing test of where the child actually sits on the 6 → 13 % competence
+6. **Checkpoint-timing test of where the child actually sits relative to the laboratory dose-response**
    curve**: a standard live-cell test that measures how long the checkpoint holds before
    cells slip through division ([E04]; laboratories call it a mitotic-escape assay).
 
@@ -409,7 +414,7 @@ the AI - reviews and signs off on this report before it is used anywhere.
   animal model of this disease family leaned slightly against (see 5b). Both
   sentences are true at once, and the second never travels
   without the gates.
-- Δ716-761+E715G function: **decidable but UNMEASURED** - by design the claim is
+- Δ716-762(+E715G) function: **decidable but UNMEASURED** - by design the claim is
   conditional on assay #4.
 - **What can go stale before submission** (drug approvals, trial statuses, screening
   guidelines): every time-sensitive claim will be re-checked in one scheduled
@@ -461,7 +466,7 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
   https://doi.org/10.1038/ng.3883 · verified 2026-09-05.
 
 **The biological mechanics**
-- **E04** Suijkerbuijk et al. 2010 - patient-cell checkpoint dose-response (~13 % competent
+- **E04** Suijkerbuijk et al. 2010 - cellular dose-response in HeLa knockdown titration (~13 % intact
   / ~6 % failing); kinase-activity question. *Cancer Research* 70:4891-900. PMID 20516114.
   https://pubmed.ncbi.nlm.nih.gov/20516114/ · verified + scite-graded 2026-09-05.
 - **E04b** Catalysis-dispensable cluster: Malureanu 2009 (PMID 19154723), Suijkerbuijk 2012
@@ -555,8 +560,9 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 - **E37** Risdiplam - approved oral small-molecule systemic splice modifier (blood-level
   SMN2 splicing pharmacodynamics in humans, incl. children). PMID 30302786.
   https://pubmed.ncbi.nlm.nih.gov/30302786/ · verified 2026-09-05; branaplam noted WITH its
-  adverse datum (early termination for peripheral neuropathy, 85.7 %  - 
-  https://doi.org/10.1038/s41591-025-04117-4).
+  adverse datum: *Nat Med* 2026 reports the branaplam VIBRANT-HD study (adult Huntington's
+  disease, not a pediatric trial) terminated after peripheral neuropathy in 18 of 21
+  treated participants (85.7 %); https://doi.org/10.1038/s41591-025-04117-4).
 
 **Senolysis**
 - **E05** Baker et al. 2011 - clearing p16+ senescent cells in BubR1-hypomorphic mice
@@ -648,7 +654,8 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 - **E74** Japanese national management handbook for PCS/MVA syndrome, March 2017, Health Labour Sciences Research Grant: schedules abdominal ultrasound and a full blood count at every visit from three months of age into adulthood. https://raredis.nibn.go.jp/malformation/management_guidelines_notebook/32.pdf
 - **E75** Maese et al. 2024, *Clinical Cancer Research*, AACR surveillance update for children predisposed to blood cancers. Cited for a verified absence: its full text names neither this syndrome nor any of its genes. https://doi.org/10.1158/1078-0432.CCR-24-0685
 - **E76** Laberko et al. 2019, *Orphanet Journal of Rare Diseases*, the only reported stem cell transplant in this syndrome, in a child with myelodysplasia and monosomy 7; graft rejection at day +47 and death at day +156. https://doi.org/10.1186/s13023-019-1073-x
-  Δ716-761 + E715G with KARD-boundary caution (wave3_ASOdeep.md §(a)).
+  Δ716-762(+E715G) (p.Glu715_Gly762delinsGly, sequence-derived in evidence/exon_skip/;
+  wave3_ASOdeep.md §(a) is a pre-reconstruction memo and keeps its historical wording).
 
 ## 11. Glossary (every technical word in this report)
 
