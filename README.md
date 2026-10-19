@@ -8,8 +8,10 @@ kinase core), decide what drug repurposing could offer.
 
 **Surveillance-first care.** No drug is recommended for this child today. One candidate
 is named for discussion with the care team inside monitoring gates: **everolimus**, the
-only drug with a proven multi-year pediatric safety record (TSC trials, median exposure
-47 months), with its mechanistic fit explicitly labeled low-grade. The committed research
+drug with the most extensive multi-year pediatric exposure record in the mapped landscape
+(TSC EXIST trials: 111 exposed patients, median exposure 47.1 months), with its mechanistic
+fit explicitly labeled weak (Sieben mTORC1 datum confined to heterozygous-carrier muscle);
+exposure evidence in TSC is not evidence of benefit in MVA. The committed research
 direction is **ASO exon-17 skipping** past the premature stop codon. Senolytics,
 full-dose read-through agents, SAC/kinase inhibitors, and immune-enhancing axes are
 excluded behind laboratory gates.

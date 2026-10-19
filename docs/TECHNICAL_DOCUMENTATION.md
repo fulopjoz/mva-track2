@@ -163,8 +163,8 @@ python3 checks/check_citations.py $PWD   # run from anywhere; arg = repo root
 
 It censuses the report's `[E#]` register (defined in report §8) against in-text
 citations and prints `CENSUS OK` on success. The script recomputes the numbers
-itself on every run; last run 2026-09-28: **61 base entries + 2 sub-rows, all
-cited**. Do not confuse this with the separate "90/90 registry-verified
+itself on every run; last run 2026-10-19: **77 base entries + 2 sub-rows (79
+cited)**. Do not confuse this with the separate "90/90 registry-verified
 citations" figure in the report (32+34+24 across the three waves; per-wave
 literature-identifier verification,
 recorded in [`evidence/WORKFLOW_CONSENSUS.md`](../evidence/WORKFLOW_CONSENSUS.md))
@@ -187,7 +187,9 @@ after any edit to `TRACK2_REPORT.md`.
 | `supporting_n`, `contrasting_n` | Study counts pro/contra |
 | `key_PMIDs_DOIs` | Pinned primary sources, `PMID|DOI; …` |
 | `consensus_status` | Wave-loop verdict (INCLUDE / INCLUDE-AS-… / EXCLUDE + reason) |
-| `0..8` | Per-reviewer score rows from the consensus matrix |
+
+(A trailing run of empty reviewer columns `0..8` was removed on 2026-10-19:
+nothing consumed them and the populated content lives in `consensus_status`.)
 
 The TSV and report §4 vote from the same consensus matrix; divergence between
 them is a defect — the attack map tracks any found instance.
