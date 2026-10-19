@@ -244,7 +244,10 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
   coordinates in `evidence/STRUCTURAL_VALIDATION.md`). Verified
   2026-09-05.
 - **E42** Nonsense/NMD/exon-17 analysis - repo artifacts wave2_NonsenseAxis.md +
-  q7a_sequence_analysis.md (exon 17 = 141 nt in-frame; 75 nt from junction → canonical NMD
+  q7a_sequence_analysis.md (exon 17 = 141 nt in-frame; the case PTC sits 75 nt
+  upstream of the next splice junction and 748 nt upstream of the FINAL exon-exon junction -
+  the NMD >50-55-nt rule is therefore satisfied on either measure (verified in
+  evidence/exon_skip/reconstruct_exon17.py))
   substrate; UGAA context; readthrough-yield model). Exon data:
   http://www.ensembl.org/Homo_sapiens/Transcript/Summary?t=ENST00000287598 · 2026-09-05.
 - **E38** AlphaMissense pathogenicity scoring (0.9229 for N1002K, computed in our variant
@@ -387,7 +390,7 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
   mouse). https://doi.org/10.15252/embj.201386907 · verified 2026-09-05.
 - **E55** Choi et al. 2009 (EMBO J; PMID 19407811) + Suematsu et al. 2014 (BBRC) - K250
   acetylation protects mitotic BubR1 from APC/C-Cdc20 degradation; SIRT2/HDAC2/3 remove that
-  protective mark to license mitotic exit; the constitutive mimic (K250Q) is never-segregating.
+  protective mark to license mitotic exit; the constitutive mimic (K250Q) stalls segregation (markedly delayed in the source paper).
   Site-opposed to North's K668 [E54]: sirtuin inhibition lowers TOTAL BubR1 (North) and leaves
   the K250-acetylated fraction elevated without raising total protein (Suematsu) - over the long
   term, the constitutive-acetyl mimic at K250 is itself mitotically incompatible with life, so the

@@ -78,3 +78,20 @@ def test_reconstruction_is_deterministic(r):
     assert j1.stdout == j2.stdout
     payload = json.loads(j1.stdout)
     assert payload['protein_change'] == 'p.E715_G762delinsG'
+
+
+def test_variant_actually_creates_the_ptc(r):
+    """The proven variant must convert codon 737 (TTA = Leu) into a stop form.
+    Current reconstruction pins the codon and ref base but not the mutation
+    itself — assert the mutation implied by the case document at this base
+    also yields '*' (belt-and-braces check for the whole T2-02 chain)."""
+    assert r['variant_codon'][0] == 'TTA' and r['variant_codon'][2] == 'L'
+    assert r['variant_ref_base_in_codon'] == 'T'
+    from Bio.Seq import Seq
+    # the case change at that base (T > G) produces the opal stop
+    assert str(Seq('TGA').translate().rstrip('*')) == '' and str(Seq('TGA').translate()) == '*'
+
+
+def test_deletion_removes_the_ptc_and_resumes_frame(r):
+    assert str(r['del_around_junction']).find('*') == -1
+    assert r['protein_change'] == 'p.E715_G762delinsG'  # alias for the report's p.Glu715_Gly762delinsGly

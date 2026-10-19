@@ -27,6 +27,12 @@ build docs/TECHNICAL_DOCUMENTATION.md TRACK2_TECHNICAL_DOCUMENTATION.pdf "Track 
 [ -f TRACK2_REPORT.md ]     && build TRACK2_REPORT.md     TRACK2_REPORT.pdf     "Track 2 — Report"
 [ -f TRACK2_LAY_REPORT.md ] && build TRACK2_LAY_REPORT.md TRACK2_LAY_REPORT.pdf "Track 2 — Lay Report"
 
+
+# Parity rule: XeLaTeX embeds per-build metadata, so the byte hash of a PDF is
+# NOT deterministic. The parity contract this repo keeps is content-extract equality:
+# after a rebuild, `pdftotext <pdf> | sha256sum` must match the recorded fingerprint.
+# Refresh the recorded fingerprints whenever source text changes, in this commit.
+
 echo "--- layout gate ---"
 # Hard gate: text past the PHYSICAL PAGE EDGE is clipped on screen and in print. Non-zero exit
 # fails the build.
