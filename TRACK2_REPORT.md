@@ -57,7 +57,7 @@ The only abundance-versus-fidelity dose-response in the literature comes from th
 
 **Provenance.** Every reference row carries its own verification trail (§8); the figures in `figures/` are committed renders, with the underlying primary sources (UniProt O60566 feature table, Ensembl MANE transcript, AlphaFold model, 6JKK structure) named in each caption. The 19 analytical memos (manifest `evidence/MEMO_MANIFEST.md`), the four adversarial review passes, and the contested-anchor adjudication memo are in the `evidence/` directory (§9).
 
-**Generative-AI disclosure.** Literature search, synthesis, adversarial review, and drafting were performed by AI agents inside the Oh My Pi harness (drafter and reviewers on the same hosted model lineage - e-INFRA Kimi K3 - with reviewer independence by role and fresh context only), under the deterministic verification gates above; no patient data left whitelisted hosts; human sign-off precedes any submission use (programme rule).
+**Generative-AI disclosure.** Literature search, synthesis, adversarial review, and drafting were performed by AI agents inside the Oh My Pi harness (drafter and reviewers on the same hosted model lineage - e-INFRA Kimi K3 - with reviewer independence by role and fresh context only), under the deterministic verification gates above; no patient data left whitelisted hosts; human sign-off precedes any submission use (programme rule). For the companion track-1 accounting (including one logged 2026-10-19 relay of ranked rows into an AI session) see `AUDIT_RESOLUTION.md` in the mva-track1 repository, "Disclosure note for the GenAI-use record".
 
 ---
 
