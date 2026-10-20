@@ -208,7 +208,7 @@ It targets a growth-signal hub called **mTOR**.
 **Why it is the only defensible name.**  Not because any study shows it helps in MVA - none
 does, and we say so in every relevant sentence - but because it is the *only* drug in the
 entire mapped landscape with a proven multi-year safety profile in children this young,
-used chronically [E23][E23a]. Mechanistically there is a plausible (honestly labeled,
+used chronically [E23][E23a]. Mechanistically there is a plausible (and we label it
 low-grade) mechanistic hope: that the drug might slow the chromosome-abnormal cells more
 than the healthy ones. Honest answer: the pertinent animal evidence is two studies, and
 neither shows benefit. One mouse-based study was neutral, and it was never run on
@@ -327,7 +327,7 @@ single decisive unknown.
 > and medical oversight, is exactly the unmonitored action this report exists to prevent.
 > If you are a parent, bring this section to the care team; never act on it yourself.
 
-### 5e. Senolysis - the mouse-to-child gap, framed honestly
+### 5e. Senolysis - the mouse-to-child gap
 In a famous 2011 experiment, clearing "aged" cells from BubR1-deficient mice prevented
 their tissue decline [E05]. One caution: that landmark result comes from a single
 laboratory; a later experiment by the same lab, in ordinary aging mice, did not repeat it
