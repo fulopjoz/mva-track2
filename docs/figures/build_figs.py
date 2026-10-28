@@ -45,7 +45,7 @@ def draw_workflow(path):
         ("Sources", "RCSB PDB \u00b7 PDBe\nAlphaFold DB\nReactome \u00b7 UniProt"),
         ("Evidence memos", "19 analytical memos\nevidence/\nMEMO_MANIFEST.md"),
         ("Adversarial passes", "major-count decay\n8 \u2192 2 \u2192 2 \u2192 0"),
-        ("Deliverables", "TRACK2_REPORT\ncandidates.tsv\nfigures F1\u2013F5"),
+        ("Deliverables", "TRACK2_REPORT\ncandidates.tsv\nfigures F1\u2013F4"),
     ]
     checks = []
     for (title, note), x in zip(boxes, cols):

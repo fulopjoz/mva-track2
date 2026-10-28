@@ -427,6 +427,7 @@ the AI - reviews and signs off on this report before it is used anywhere.
   [figures/F2_BubR1_protein_map.png](figures/F2_BubR1_protein_map.png)
 - **Figure 3** - the gene and the skippable exon (§5c above).
 - **Figure 4** - the decision map (§5a above).
+
 ![Figure 1 - where the second mutation sits](figures/F1_variant_structure.png)
 *Figure 1. Left: human BubR1 kinase domain - a computer-predicted structure of the normal,
 healthy protein - with residue 1002 marked red (the position of the child's shape mutation,

@@ -15,7 +15,7 @@ That grammar (**Figure 4**) - *raise, spare, or at minimum not further lower res
 
 ![Figure 4 - The decision instrument: surveillance backbone, gated candidate, precision program, gated adjuncts, exclusions. Source: frozen attack-map dispositions (candidates.tsv).](figures/F4_decision_instrument.png)
 
-We support these verdicts with an evidence program of unusual rigor: three literature waves with recorded queries, 90/90 registry-verified citations, four staged adversarial review passes with major-finding decay 8→2→2→0 to the pre-declared ceiling (**Figure 5**), and a deterministic weighted decision matrix over four candidate submission architectures [E40][E40-SD]. A live five-registry census confirms no MVA intervention trial is registered anywhere [E21a]; the surveillance standard of care (renal ultrasound every three months, birth to age seven [E21][E22]) therefore remains the backbone onto which any drug discussion must graft.
+We support these verdicts with an evidence program of unusual rigor: three literature waves with recorded queries, 90/90 registry-verified citations, four staged adversarial review passes with major-finding decay 8→2→2→0 to the pre-declared ceiling, and a deterministic weighted decision matrix over four candidate submission architectures [E40][E40-SD]. A live five-registry census confirms no MVA intervention trial is registered anywhere [E21a]; the surveillance standard of care (renal ultrasound every three months, birth to age seven [E21][E22]) therefore remains the backbone onto which any drug discussion must graft.
 
 **Nothing here is a prescription.** Every recommendation is expressed with its stopping gates, its safety counter-evidence quoted in full, and the assays required before any human exposure.
 
