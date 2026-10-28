@@ -26,7 +26,7 @@ Full reasoning: `TRACK2_REPORT.md` (or `.pdf`). Family-facing version:
 | `TRACK2_REPORT.md` / `.pdf` | The submitted report |
 | `TRACK2_LAY_REPORT.md` / `.docx` / `.pdf` | Family-facing version of the same evidence |
 | `candidates.tsv` | The 20-row candidate table with per-row verdicts |
-| `figures/` | F1-F5: structure, protein map, gene schematic, decision instrument, process figure |
+| `figures/` | F1-F4: structure, protein map, gene schematic, decision instrument |
 | `evidence/` | The 19 analytical memos backing every claim (manifest: `evidence/MEMO_MANIFEST.md`), plus the four adversarial review passes, the contested-anchor adjudication, and the structural analyses |
 | `checks/check_citations.py` | Re-verifies the reference census (count of defined vs cited entries) |
 

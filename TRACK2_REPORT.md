@@ -51,8 +51,6 @@ The only abundance-versus-fidelity dose-response in the literature comes from th
 
 **Verification totals.** 90 of 90 sampled identifiers resolve to real papers [E40]. Adversarial review found majors 8→2→2→0 across four passes, with closure declared at the pre-declared ceiling when pass 4 returned zero and residual risk documented [E41]. Corrections caught mid-process are preserved inline with P-tags rather than silently repaired: a misattributed mouse experiment [P2-1], an overstated trial conclusion [P2-2].
 
-![Figure 5 - The evidence process: four adversarial passes, major-finding decay 8→2→2→0, closure at the pre-declared ceiling. Source: evidence/WORKFLOW_CONSENSUS.md ledger + wave review memos.](figures/F5_consensus_process.png)
-
 **Decision architecture.** Four submission architectures were compared in a pre-declared weighted matrix; the surveillance-first, four-lane structure (O1) won with rank stability under all tested sensitivity perturbations of the weights [E40-SD].
 
 **Provenance.** Every reference row carries its own verification trail (§8); the figures in `figures/` are committed renders, with the underlying primary sources (UniProt O60566 feature table, Ensembl MANE transcript, AlphaFold model, 6JKK structure) named in each caption. The 19 analytical memos (manifest `evidence/MEMO_MANIFEST.md`), the four adversarial review passes, and the contested-anchor adjudication memo are in the `evidence/` directory (§9).
@@ -468,7 +466,7 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 
 - **Lay-accessible report** (family-facing, same evidence, vocabulary-controlled): `TRACK2_LAY_REPORT.md` / `.docx`.
 - **Evidence pack** (19 analytical memos, enumerated in `evidence/MEMO_MANIFEST.md`, plus the four adversarial review passes that closed it): the `evidence/` directory of this repository.
-- **Figures**: F1 structural (AlphaFold + 6JKK), F2 domain map, F3 gene/exon-17 schematic, F4 decision map, F5 evidence-process decay; committed PNGs in `figures/`.
+- **Figures**: F1 structural (AlphaFold + 6JKK), F2 domain map, F3 gene/exon-17 schematic, F4 decision map; committed PNGs in `figures/`.
 - **Challenge**: SageBio Rare Disease Real Kid MVA Hackathon 2026 - case, dataset and submission window 2026-08-24 → 2026-10-24 [E44].
 
 *Prepared with AI agents under deterministic verification gates; human sign-off required before any submission or clinical use.*

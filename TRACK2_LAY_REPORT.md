@@ -139,7 +139,7 @@ on those reviews: the checkers ran inside the same AI lineage as the drafters - 
 by role, not by vendor, so a genuinely different-vendor review is still on our to-do list. Findings were scored
 *major / minor* and every finding was fixed, with the fix itself reviewed in the next pass.
 The majors per adversarial review ran **8 → 2 → 2 → 0** across the four reviews, where stopping at zero was the
-pre-declared rule (Figure 5) [E41]. In parallel, every load-bearing citation was
+pre-declared rule [E41]. In parallel, every load-bearing citation was
 re-verified against live registries: **90 of 90 sampled identifiers resolve to real papers**
 [E40]. Nothing was accepted until a human (this project's lead) approved it, per our own rule.
 The full audit trail ships in this repository (`evidence/WORKFLOW_CONSENSUS.md`, the four
@@ -396,7 +396,7 @@ Everything below fits inside routine ethics-committee consent; none invades the 
 
 **Where we stand (2026-09-05).**  The evidence program behind every verdict in §5 is
 *complete to its own stopping rule*: three research waves, 19 verified research memos,
-four adversarial reviews with measured error-decay 8 → 2 → 2 → 0 (Figure 5),
+four adversarial reviews with measured error-decay 8 → 2 → 2 → 0,
 and a frozen, fully-traced decision record [E40][E41]. By our own rule, a person - never
 the AI - reviews and signs off on this report before it is used anywhere.
 (Competition housekeeping - what we submit, deadlines, remaining work - has been moved to
@@ -427,13 +427,6 @@ the AI - reviews and signs off on this report before it is used anywhere.
   [figures/F2_BubR1_protein_map.png](figures/F2_BubR1_protein_map.png)
 - **Figure 3** - the gene and the skippable exon (§5c above).
 - **Figure 4** - the decision map (§5a above).
-- **Figure 5** - how the evidence was stress-tested (adversarial decay + verification):
-
-![Figure 5 - consensus stress-test](figures/F5_consensus_process.png)
-*Figure 5. Left: majors found per independent adversarial pass (the pre-declared stop rule
-met at zero). Right: identifier verification per wave (all sampled sources resolve to real
-papers). Source: evidence/WORKFLOW_CONSENSUS.md changelog.*
-
 ![Figure 1 - where the second mutation sits](figures/F1_variant_structure.png)
 *Figure 1. Left: human BubR1 kinase domain - a computer-predicted structure of the normal,
 healthy protein - with residue 1002 marked red (the position of the child's shape mutation,

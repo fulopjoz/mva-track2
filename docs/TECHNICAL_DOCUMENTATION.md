@@ -20,7 +20,7 @@ Aneuploidy). The deliverables in this repository are:
 | Professional report | [`TRACK2_REPORT.md`](../TRACK2_REPORT.md), [`TRACK2_REPORT.pdf`](../TRACK2_REPORT.pdf) | The submission document: mechanism characterization, therapeutic landscape, exclusion jurisprudence, six-assay validation plan |
 | Lay report | [`TRACK2_LAY_REPORT.md`](../TRACK2_LAY_REPORT.md), [`.pdf`](../TRACK2_LAY_REPORT.pdf) | Plain-language companion for the family/foundations audience |
 | Candidate table | [`candidates.tsv`](../candidates.tsv) | 20-row machine-readable candidate register |
-| Report figures | [`figures/`](../figures) | F1–F5 committed renders |
+| Report figures | [`figures/`](../figures) | F1–F4 committed renders |
 | Evidence pack | [`evidence/`](../evidence) | 19 analytical memos: 4 wave-2 + 5 wave-3 + 4 wave-4 + 3 literature scans + 3 mechanism memos, exactly as enumerated in [`evidence/MEMO_MANIFEST.md`](../evidence/MEMO_MANIFEST.md), plus the four adversarial review passes, adjudication memo, and structural-validation records |
 | Native images | [`evidence/native_images/`](../evidence/native_images) | Third-party structural imagery with a full verification chain (§4) |
 | Citation check | [`checks/check_citations.py`](../checks/check_citations.py) | Reference-consistency gate (§6) |
@@ -130,7 +130,7 @@ the withdrawn earlier wording, is
 
 ---
 
-## 5. Report figure set F1–F5
+## 5. Report figure set F1–F4
 
 Committed renders in [`figures/`](../figures); the report's captions (§2–§5)
 name each figure's primary sources (UniProt O60566 feature table, Ensembl MANE
@@ -142,7 +142,6 @@ transcript, AlphaFold model, 6JKK crystal structure).
 | F2_BubR1_protein_map.png | BUBR1 functional-domain map with the two patient alleles |
 | F3_BUB1B_gene_exon17.png | Exon-17 architecture for the ASO-skipping program |
 | F4_decision_instrument.png | Gate instrument for therapeutic decisions |
-| F5_consensus_process.png | The wave/consensus process summarized for the report |
 
 Related structural artifacts: [`evidence/6JKK.cif`](../evidence/6JKK.cif),
 [`evidence/6JKK.pdb`](../evidence/6JKK.pdb),
