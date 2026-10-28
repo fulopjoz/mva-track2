@@ -26,6 +26,11 @@ build() {  # build <source.md> <target.pdf> <title>
 build docs/TECHNICAL_DOCUMENTATION.md TRACK2_TECHNICAL_DOCUMENTATION.pdf "Track 2 — Technical Documentation"
 [ -f TRACK2_REPORT.md ]     && build TRACK2_REPORT.md     TRACK2_REPORT.pdf     "Track 2 — Report"
 [ -f TRACK2_LAY_REPORT.md ] && build TRACK2_LAY_REPORT.md TRACK2_LAY_REPORT.pdf "Track 2 — Lay Report"
+# The lay .docx is a third shipped format; nothing else regenerates it, so it lives here.
+# No reference-doc is tracked in the repo: plain pandoc is the reproducible option.
+[ -f TRACK2_LAY_REPORT.md ] && pandoc TRACK2_LAY_REPORT.md -o TRACK2_LAY_REPORT.docx \
+  --resource-path=docs:docs/figures:. \
+  --metadata title="Track 2 — Lay Report" && echo "built TRACK2_LAY_REPORT.docx"
 
 
 # Parity rule: XeLaTeX embeds per-build metadata, so the byte hash of a PDF is
