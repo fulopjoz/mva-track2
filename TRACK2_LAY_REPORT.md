@@ -13,9 +13,6 @@ carries a bracketed tag like **[E42]** that points to an entry in the References
 (§10), where you find the real scientific source, a clickable link, and a one-line note on
 how that source was verified. Nothing in this report asserts anything beyond what those
 sources support - where honest science must say "nobody knows", this report says exactly that.
-One more convention: a tag like **[P2-1]** marks a correction our own adversarial reviewers
-caught mid-process - we keep these visible on purpose. And a tag like **[E40-P2]** points to
-the internal review document recording that fix.
 
 Two warnings up front, kept short and honest:
 
@@ -158,13 +155,10 @@ the sources are a family guide and a national handbook rather than a formal guid
 marrow evidence is a single case. We report it because a three-monthly blood test is cheap and
 low-risk, and because a family should be able to raise it with their team and ask whether it fits.
 
-**Three honesty features unusual enough to name:**
-1. Several of our own earlier statements were caught and corrected by the adversarial
-   passes - the corrections are preserved inline so you can see them (e.g., a misattributed
-   mouse experiment [P2-1], an overstated trial result [P2-2]).
-2. Where no evidence exists, the report says "**no evidence located**" and shows the
+**Two honesty features unusual enough to name:**
+1. Where no evidence exists, the report says "**no evidence located**" and shows the
    search queries that were tried [E40].
-3. Where the honest answer is "this must be tested in a lab before anyone can responsibly
+2. Where the honest answer is "this must be tested in a lab before anyone can responsibly
    conclude anything," we name the exact experiment (§6) rather than papering over it.
 
 ---
@@ -492,8 +486,7 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 - **E21** Hol JA, Jongmans MCJ, et al. 2021 - SIOP-RTSG/EEPGN Wilms-tumour surveillance in
   at-risk children (renal US q3mo birth→7 for defined syndromes). *Eur J Cancer* 153:51–63.
   https://doi.org/10.1016/j.ejca.2021.05.014 · PMID 34134020 · verified against
-  wave4_SurveillanceToday.md §1.2, 2026-09-05. (Earlier entry mis-pointed to
-  10.1016/j.pediatrneurol.2021.07.011 - the Northrup TSC-criteria paper; corrected.)
+  wave4_SurveillanceToday.md §1.2, 2026-09-05.
 - **E22** Nakano et al. 2024 - AACR 2nd Childhood Cancer Predisposition Workshop update,
   genomic-instability disorders (endorses the same cadence). PMID 39264246.
   https://pubmed.ncbi.nlm.nih.gov/39264246/ · verified 2026-09-05.
@@ -579,8 +572,7 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
   https://pubmed.ncbi.nlm.nih.gov/29498925/ · verified.
 - **E16** Pullarkat et al. 2021 - **pediatric navitoclax exposure** (combination regimens,
   RP2D 25 mg <45 kg). PMID 33593877. https://pubmed.ncbi.nlm.nih.gov/33593877/ · NCT03181126 live registry; RAVEN NCT05192889
-  (ages 4-30, actively dosed). **This overturned our own earlier "zero pediatric senolytic"
-  claim - kept on record as the correction that made the axis honest.**
+  (ages 4-30, actively dosed).
 
 **Stabilization & abundance chemistry**
 - **E50** Arimoclomol (Miplyffa) - US FDA approval 2024 (with miglustat, NPC; children ≥2 y).
@@ -606,9 +598,8 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 
 **Closed axes**
 - **E58** Tang et al. 2011 - mTOR arms neutral on trisomic MEFs (never tested on Bub1b^H/H
-  cells); AICAR arm killed aneuploid-fraction-high cells. *Cell*, **PMID 21315436** (the
-  corrected identifier - an earlier mis-citation of 21546338 remains deleted from all
-  artifacts). https://pubmed.ncbi.nlm.nih.gov/21315436/ · full-text verified twice.
+  cells); AICAR arm killed aneuploid-fraction-high cells. *Cell*, **PMID 21315436**.
+ https://pubmed.ncbi.nlm.nih.gov/21315436/ · full-text verified twice.
 - **E60** MILI trial protocol - metformin prevention in Li-Fraumeni (adults ≥16; mechanism
   differs - does not transfer to CIN precedent). https://doi.org/10.1186/s13063-024-07929-w ·
   verified.
@@ -706,8 +697,7 @@ comparison of four candidate architectures (weights and scores in SCOPE_DECISION
 - All scientific content derives from the evidence pack in `evidence/` (manifest
   `MEMO_MANIFEST.md`): literature sweeps, mechanism/phenotype loops,
   variant/structural analyses, three research waves with recorded query logs, four
-  adversarial reviews, and the consensus decision record. Nothing here asserts a fact beyond those artifacts; editorial corrections visible
-  inline as [P2-#]/[P3-#] tags.
+  adversarial reviews, and the consensus decision record. Nothing here asserts a fact beyond those artifacts.
 - Figures: committed PNGs in `figures/`, generated from the data sources named in each
   caption.
 - **AI use**: research memos and adversarial reviews were drafted by AI agents inside one

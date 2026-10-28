@@ -49,7 +49,7 @@ The only abundance-versus-fidelity dose-response in the literature comes from th
 
 **Design.** Searching and review were separated by role: searcher agents produced the evidence memos enumerated in `evidence/MEMO_MANIFEST.md` [E40], and four staged review passes were run by agents spawned with fresh context and a hostile mandate. Reviewer independence is therefore by role and context, not by vendor: drafter and reviewers ran inside the same harness lineage and the records do not resolve which model filled which role, so a vendor-different pass remains future work. Every wave carried deterministic checks: at least five sampled identifiers per document re-resolved against the registry, PubMed re-fetch for load-bearing clinical claims, and live registry census queries with positive controls, so that a trial class known to exist must be returned by the same query that returns zero for this syndrome [E21a].
 
-**Verification totals.** 90 of 90 sampled identifiers resolve to real papers [E40]. Adversarial review found majors 8→2→2→0 across four passes, with closure declared at the pre-declared ceiling when pass 4 returned zero and residual risk documented [E41]. Corrections caught mid-process are preserved inline with P-tags rather than silently repaired: a misattributed mouse experiment [P2-1], an overstated trial conclusion [P2-2].
+**Verification totals.** 90 of 90 sampled identifiers resolve to real papers [E40]. Adversarial review found majors 8→2→2→0 across four passes, with closure declared at the pre-declared ceiling when pass 4 returned zero and residual risk documented [E41].
 
 **Decision architecture.** Four submission architectures were compared in a pre-declared weighted matrix; the surveillance-first, four-lane structure (O1) won with rank stability under all tested sensitivity perturbations of the weights [E40-SD].
 
@@ -256,8 +256,7 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 - **E21** Hol JA, Jongmans MCJ, et al. 2021 - SIOP-RTSG/EEPGN Wilms-tumour surveillance in
   at-risk children (renal US q3mo birth→7 for defined syndromes). *Eur J Cancer* 153:51–63.
   https://doi.org/10.1016/j.ejca.2021.05.014 · PMID 34134020 · verified against
-  wave4_SurveillanceToday.md §1.2, 2026-09-05. (An earlier entry mis-pointed to
-  10.1016/j.pediatrneurol.2021.07.011 - the Northrup TSC-criteria paper; corrected.)
+  wave4_SurveillanceToday.md §1.2, 2026-09-05.
 - **E22** Nakano et al. 2024 - AACR 2nd Childhood Cancer Predisposition Workshop update,
   genomic-instability disorders (endorses the same cadence). PMID 39264246.
   https://pubmed.ncbi.nlm.nih.gov/39264246/ · verified 2026-09-05.
@@ -371,8 +370,6 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
   (ages 4-30; active, not recruiting - accrual closed 2024, follow-up ongoing; summary
   results posted on ClinicalTrials.gov 2025-09-22: 19/30 MRD-negative end-of-Block-1 on
   venetoclax+navitoclax reinduction, RP2Ds identified).
-  **This overturned our own earlier "zero pediatric senolytic"
-  claim - kept on record as the correction that made the axis honest.**
 
 **Stabilization & abundance chemistry**
 - **E50** Arimoclomol (Miplyffa) - US FDA approval 2024 (with miglustat, NPC; children ≥2 y).
@@ -406,9 +403,8 @@ pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt;/.
 - **E63** Lin et al. 2026: nicotinamide riboside ± individualised exercise in Friedreich's ataxia; 12-week phase 2 randomised 2×2 factorial trial, single site, n=66 (33 children aged 10–17, 33 adults), ITT, all completed; NR weight-banded 300/600/900 mg/day. Primary endpoint peak VO₂ vs control: combination +0.21 L/min (0.05–0.36) Holm-adjusted p=0.0299; NR alone +0.10 (−0.05 to 0.26) p=0.188; exercise alone +0.16 (0.00–0.31) p=0.103; Stage 2 combination vs exercise alone +0.05 (−0.10 to 0.21) p=0.49. No serious adverse events; grade 1–2 only. Exploratory unadjusted child/adult interaction p=0.011. NCT04192136. https://doi.org/10.1016/S1474-4422(26)00082-7
 - **E64** EFSA NDA Panel 2026: safety of β-nicotinamide mononucleotide under Regulation (EU) 2015/2283: safe as a niacin source up to 300 mg/day; target population adults, excluding pregnant and lactating women; NOAEL 400 mg/kg bw/day (90-day rat study). https://doi.org/10.2903/j.efsa.2026.10007
 - **E58** Tang et al. 2011 - mTOR arms neutral on trisomic MEFs (never tested on Bub1b^H/H
-  cells); AICAR arm killed aneuploid-fraction-high cells. *Cell*, **PMID 21315436** (the
-  corrected identifier - an earlier mis-citation of 21546338 remains deleted from all
-  artifacts). https://pubmed.ncbi.nlm.nih.gov/21315436/ · full-text verified twice.
+  cells); AICAR arm killed aneuploid-fraction-high cells. *Cell*, **PMID 21315436**.
+ https://pubmed.ncbi.nlm.nih.gov/21315436/ · full-text verified twice.
 - **E60** MILI trial protocol - metformin prevention in Li-Fraumeni (adults ≥16; mechanism
   differs - does not transfer to CIN precedent). https://doi.org/10.1186/s13063-024-07929-w ·
   verified.
