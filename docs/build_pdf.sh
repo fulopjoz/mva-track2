@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # Rebuild the Track-2 PDFs and gate them on layout (run from anywhere).
 #
-# The gate is the point: build_figs.py already self-gates figure labels against their boxes, but
-# nothing checked the BUILT PDFs, so text running past the page edge shipped unnoticed — five
-# such runs were present before this change (measured, see checks/check_pdf_layout.py).
+# The gate is the point: nothing checked the BUILT PDFs before this script, so
+# text running past the page edge shipped unnoticed — five such runs.
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
